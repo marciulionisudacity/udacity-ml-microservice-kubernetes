@@ -1,11 +1,14 @@
-build-frontend:
-  docker:
-    - image: python:3.7-alpine3.11
-  steps:
-    - checkout
-    - run:
-        name: Test
-        command: echo "Test"
+version: 2.1
+
+jobs:
+  build-frontend:
+    docker:
+      - image: python:3.7-alpine3.11
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: echo "Test"
 
 workflows:
   default:
