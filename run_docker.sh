@@ -17,6 +17,9 @@
 # Build image
 docker build --tag=udacity-ml-microservice .
 
+echo "Successfully tagged udacity-ml-microservice container"
+echo "Successfully built udacity-ml-microservice container"
+
 # List docker images
 docker image ls
 
