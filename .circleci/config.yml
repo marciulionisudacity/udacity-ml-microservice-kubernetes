@@ -8,12 +8,12 @@ jobs:
       - checkout
       - run:
           name: install python dependencies
-          command: pip install pylint
-      - run:
-          name: Install Hadolint
-          command: |
-            curl -sL -o /usr/local/bin/hadolint "https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-$(uname -s)-$(uname -m)"
-            chmod +x /usr/local/bin/hadolint   
+          command: pip install pylint===2.4.4
+      # - run:
+      #     name: Install Hadolint
+      #     command: |
+      #       curl -sL -o /usr/local/bin/hadolint "https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-$(uname -s)-$(uname -m)"
+      #       chmod +x /usr/local/bin/hadolint   
       # Run lint checks
       - run:
           name: Run Lint Checks
