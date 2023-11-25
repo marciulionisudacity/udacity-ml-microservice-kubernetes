@@ -8,8 +8,8 @@ jobs:
       - checkout
       - run:
           name: install python dependencies
-          command: 
-            sudo apt-get install build-essential \
+          command: |
+            sudo apt-get install build-essential 
             pip install pylint===2.4.4 
             
       # - run:
