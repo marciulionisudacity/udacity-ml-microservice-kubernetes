@@ -3,9 +3,7 @@
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
-
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+This is a `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). `app.py`—that serves out predictions (inference) about housing prices through API calls.
 
 ## Setup the Environment
 
@@ -19,6 +17,34 @@ python3 -m virtualenv --python=<path-to-Python3.7> .devops
 source .devops/bin/activate
 ```
 * Run `make install` to install the necessary dependencies
+
+### Setup and Configure the docker locally: 
+
+* Install Docker: First, you need to install Docker on your local machine. Docker provides installation packages for various operating systems such as Windows, macOS, and Linux. Visit the official Docker website (https://www.docker.com/) and download the appropriate version for your operating system.
+
+* Verify Docker Installation: After the installation, open a terminal or command prompt and run the following command to verify that Docker is installed correctly:
+`docker --version`
+This command should display the version of Docker installed on your machine.
+
+* Start Docker: Start the Docker service on your machine. The process for starting Docker varies depending on your operating system. On Windows, you can find the Docker Desktop application in your start menu and launch it. On macOS, you can find the Docker application in your Applications folder and open it. On Linux, you can start the Docker service using the command:
+`sudo service docker start`
+
+* To build docker container for application locally just open project folder in terminal and just run this command:  `./run_docker.sh`
+
+### Setup and Configure the docker locally: 
+To set up Kubernetes locally, you have a few options. Let's go through them:
+
+* Docker Desktop: The simplest way to install Kubernetes locally is to use Docker Desktop for Windows or Docker Desktop for Mac. These tools come with Kubernetes support built-in. You can download and install Docker Desktop from the official Docker website. Once installed, you can enable Kubernetes in the Docker Desktop settings, and it will set up a local Kubernetes cluster for you.
+
+* Minikube: Minikube is a tool that allows you to run a single-node Kubernetes cluster on your local machine. It is a lightweight and easy-to-use option for local development and testing. To install Minikube, you can follow the instructions provided in the official Kubernetes documentation. Once installed, you can start Minikube, and it will set up a local Kubernetes cluster for you to use.
+
+* To run app in kubernetes locally just: 
+Upload built container running `upload_docker.sh` script from the project folder.
+Start Minikube: `minikube start`.
+Run application in kubernetes pod ust open project folder in terminal and just run this command:  `run_kubernetes.sh`.
+
+
+
 
 ### Running `app.py`
 
