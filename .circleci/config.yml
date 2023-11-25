@@ -11,6 +11,8 @@ jobs:
           command: |
             apk add curl
             apk add --no-cache build-base
+            apk add --no-cache lapack-dev
+            apk add --no-cache gfortran
             make install
       - run:
           name: Install Hadolint
