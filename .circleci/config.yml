@@ -12,7 +12,11 @@ jobs:
             apk add curl
             apk add --no-cache build-base
             apk add --no-cache lapack-dev
-            apk add --no-cache gfortran
+            apk add --no-cache gfortran 
+            
+            export LAPACK=/usr/lib/liblapack.so
+            export ATLAS=/usr/lib/libatlas.so     
+
             make install
       - run:
           name: Install Hadolint
