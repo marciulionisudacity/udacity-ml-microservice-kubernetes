@@ -19,11 +19,6 @@ jobs:
 
             make install
       - run:
-          name: Install Hadolint
-          command: |
-            curl -sL -o /usr/local/bin/hadolint "https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-$(uname -s)-$(uname -m)"
-            chmod +x /usr/local/bin/hadolint   
-      - run:
           name: Run Lint Checks
           command: make lint             
 
