@@ -13,9 +13,9 @@ jobs:
             apk add --no-cache build-base
             apk add --no-cache lapack-dev
             apk add --no-cache gfortran 
-            
-            export LAPACK=/usr/lib/liblapack.so
-            export ATLAS=/usr/lib/libatlas.so     
+            apk add --no-cache blas-dev
+            apk add --no-cache libopenblas-dev 
+            apk add --no-cache liblapack-dev
 
             make install
       - run:
