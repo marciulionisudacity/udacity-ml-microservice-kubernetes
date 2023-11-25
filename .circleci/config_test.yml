@@ -3,19 +3,19 @@ version: 2.1
 jobs:
   lint-code:
     docker:
-      - image: python:3.7
+      - image: python:3.7-alpine3.11
     steps:
       - checkout
       - run:
           name: Install python dependencies
           command: |
-            apt-get update
-            apt-get install -y curl
-            apt-get install -y build-essential
-            apt-get install -y liblapack-dev
-            apt-get install -y gfortran
-            apt-get install -y libblas-dev
-            apt-get install -y libopenblas-dev
+            apk add curl
+            apk add --no-cache build-base
+            apk add --no-cache lapack-dev
+            apk add --no-cache gfortran 
+            apk add --no-cache blas-dev
+            apk add --no-cache libopenblas-dev
+            apk add --no-cache liblapack-dev
 
             make install
       - run:
