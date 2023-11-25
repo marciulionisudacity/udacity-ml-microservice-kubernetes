@@ -9,7 +9,7 @@ jobs:
       - run:
           name: install python dependencies
           command: |
-            apk add -y build-essential
+            apk add build-essential
             pip install pylint===2.4.4 
             
       # - run:
