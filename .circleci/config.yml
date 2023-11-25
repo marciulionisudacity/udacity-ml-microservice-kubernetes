@@ -14,7 +14,7 @@ jobs:
             apk add --no-cache lapack-dev
             apk add --no-cache gfortran 
             apk add --no-cache blas-dev
-            apk add --no-cache libopenblas-dev 
+            apk add --no-cache libopenblas-dev
             apk add --no-cache liblapack-dev
 
             make install
