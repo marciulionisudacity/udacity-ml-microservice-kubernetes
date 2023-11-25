@@ -1,7 +1,7 @@
-pod/udacitymlmicroservice created
-Waiting for the pod to be in the 'Running' state...
-NAME                    READY   STATUS    RESTARTS   AGE
-udacitymlmicroservice   1/1     Running   0          5s
-Forwarding from 127.0.0.1:8080 -> 80
-Forwarding from [::1]:8080 -> 80
-Handling connection for 8080
+sh ./make_prediction.sh
+Port: 8080
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
