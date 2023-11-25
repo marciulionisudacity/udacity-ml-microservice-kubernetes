@@ -6,16 +6,18 @@
 # (Optional) Build a simple integration test
 
 setup:
+	#install hadolint
+	curl -sL -o /usr/local/bin/hadolint "https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-$(uname -s)-$(uname -m)" 
+    chmod +x /usr/local/bin/hadolint 
+
 	# Create python virtualenv & source it
-	# source ~/.devops/bin/activate
 	python3 -m venv ~/.devops
+	source ~/.devops/bin/activate
 
 install:
 	# This should be run from inside a virtualenv
-	# pip install --upgrade pip &&\
-	# pip install -r requirements.txt &&\
-	curl -sL -o /usr/local/bin/hadolint "https://github.com/hadolint/hadolint/releases/download/v1.18.0/hadolint-$(uname -s)-$(uname -m)" &&\
-    chmod +x /usr/local/bin/hadolint 
+	pip install --upgrade pip &&\
+	pip install -r requirements.txt &&\
 
 test:
 	# Additional, optional, tests could go here
