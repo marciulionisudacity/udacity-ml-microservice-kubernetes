@@ -61,3 +61,7 @@ Run application in kubernetes pod ust open project folder in terminal and just r
 `Dockerfile` contains instructions how to build docker container for our application. 
 
 `requirements.txt` contains information what requirements are needed for the python app. 
+
+
+Screenshot of linting step: 
+![Alt Text](lint_screenshot.png)
